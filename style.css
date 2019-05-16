@@ -1,0 +1,29 @@
+body{
+    background-color: #dadada;
+}
+
+#texto1 , #texto2{
+    width: 80%;
+    margin-bottom: 5px;
+}
+
+#button{
+    width: 15%;
+}
+
+#divTexto1{
+    background-color: #ffffff;
+    width: 48%;
+    height: 80%;
+    position: relative;
+    float: left;
+}
+
+
+#divtexto2{
+    background-color: #ffffff;
+    width: 48%;
+    height: 80%;
+    position: relative;
+    float: right;
+}
