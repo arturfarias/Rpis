@@ -5,16 +5,18 @@ function gerar(){
     var div2 = document.getElementById("divTexto2");
 
     var listaDePalavras1 = texto1.split(" ");
-    listaDePalavras1.forEach(function(palavra) {
-        let tag = "<texto1 id='a"+ listaDePalavras1.indexOf(palavra) +"'>" + palavra +""+"</texto1>"
+
+    for (let x =0; x< listaDePalavras1.length;x++){
+        let tag = "<texto2 id='a"+ x +"'" + "onclick='marcar(\""+ "a"+ x +"\")'"+">" + listaDePalavras1[x] +" "+"</texto2>"
         div1.innerHTML += tag;
-    });
+    }
 
     var listaDePalavras2 = texto2.split(" ");
-    listaDePalavras2.forEach(function(palavra) {
-        let tag = "<texto2 id='b"+ listaDePalavras2.indexOf(palavra) +"'>" + palavra +" "+"</texto2>"
+
+    for (let x =0; x< listaDePalavras2.length;x++){
+        let tag = "<texto2 id='b"+ x +"'" + "onclick='marcar(\""+ "b"+ x +"\")'"+">" + listaDePalavras2[x] +" "+"</texto2>"
         div2.innerHTML += tag;
-    });
+    }
 }
 
 function limpar(){
@@ -23,4 +25,8 @@ function limpar(){
 
     document.getElementById("divTexto1").innerHTML = ""
     document.getElementById("divTexto2").innerHTML = ""
+}
+
+function marcar(id){
+    document.getElementById(id).style.fontWeight = "bold";
 }
