@@ -28,4 +28,6 @@ body{
     height: 80%;
     position: relative;
     float: right;
+    line-height: 40px;
+    font-size: 25px;
 }
