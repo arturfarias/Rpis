@@ -1,22 +1,18 @@
+function criarDiv(texto,elemento,id){
+    let div = document.getElementById(elemento);
+
+    for (let[index,value] of texto.split(" ").entries()){
+        let tag = `<texto1 id="${id}${index}" onclick="marcar('${id}${index}')"> ${value} </texto1>`
+        div.innerHTML += tag;
+    }
+};
+
 function gerar(){
-    var texto1 = document.getElementById("texto1").value;
-    var texto2 = document.getElementById("texto2").value;
-    var div1 = document.getElementById("divTexto1");
-    var div2 = document.getElementById("divTexto2");
+    let texto1 = document.getElementById("texto1").value;
+    let texto2 = document.getElementById("texto2").value;
 
-    var listaDePalavras1 = texto1.split(" ");
-
-    for (let x =0; x< listaDePalavras1.length;x++){
-        let tag = `<texto1 id="a${x}" onclick="marcar('a${x}')"> ${listaDePalavras1[x]} </texto1>`
-        div1.innerHTML += tag;
-    }
-
-    var listaDePalavras2 = texto2.split(" ");
-
-    for (let x =0; x< listaDePalavras2.length;x++){
-        let tag = `<texto2 id="b${x}" onclick="marcar('b${x}')"> ${listaDePalavras2[x]} </texto2>`
-        div2.innerHTML += tag;
-    }
+    criarDiv(texto1,"divTexto1","a")
+    criarDiv(texto2,"divTexto2","b")
 }
 
 function limpar(){
