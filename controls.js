@@ -7,14 +7,14 @@ function gerar(){
     var listaDePalavras1 = texto1.split(" ");
 
     for (let x =0; x< listaDePalavras1.length;x++){
-        let tag = "<texto2 id='a"+ x +"'" + "onclick='marcar(\""+ "a"+ x +"\")'"+">" + listaDePalavras1[x] +" "+"</texto2>"
+        let tag = `<texto1 id="a${x}" onclick="marcar('a${x}')"> ${listaDePalavras1[x]} </texto1>`
         div1.innerHTML += tag;
     }
 
     var listaDePalavras2 = texto2.split(" ");
 
     for (let x =0; x< listaDePalavras2.length;x++){
-        let tag = "<texto2 id='b"+ x +"'" + "onclick='marcar(\""+ "b"+ x +"\")'"+">" + listaDePalavras2[x] +" "+"</texto2>"
+        let tag = `<texto2 id="b${x}" onclick="marcar('b${x}')"> ${listaDePalavras2[x]} </texto2>`
         div2.innerHTML += tag;
     }
 }
