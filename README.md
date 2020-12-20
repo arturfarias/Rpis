@@ -1,2 +1,2 @@
-# Rpis
+# Rps
 Relacionador de Palavras Simples
